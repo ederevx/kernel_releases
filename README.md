@@ -2,7 +2,7 @@
 This repository contains all builds of Lazy kernel for custom ROMS and OOS.
 
 # Forum and Group links
-- XDA Thread - https://forum.xda-developers.com/oneplus-5/oneplus-5--5t-cross-device-development/lazy-kernel-android-10-custom-roms-t4077467
+- XDA Thread - https://forum.xda-developers.com/t/lazy-kernel-for-op5-t-10-27-2020.4077467/
 - Telegram Support Group - https://t.me/lazykernel
 - Telegram Kernel Release Group - https://t.me/lazyrelease
   - All builds including test builds will be uploaded here.
