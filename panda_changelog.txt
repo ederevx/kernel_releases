@@ -1,0 +1,53 @@
+# Current Stable Version
+- panda | revision 1 | 02-28-21
+
+# Source Code
+https://github.com/ederekun/lazy_kernel_op5-t
+
+# Main Features
+- Upstreamed 4.4.258 merged from CAF msm-4.4
+- Latest CAF tag and wifi stack merged
+  - LA.UM.8.4.1.r1-02900-8x98.0
+- Built with latest LLVM Clang 13 from LLVM's apt repository for Debian
+  - ThinLTO, LD-DCDE, and -O3 Enabled
+- Dynamic SchedTune Structure
+  - Dynamically sets values according to interactivity with durations preconfigured, check lazy_defconfig
+    in source code to see the values.
+  - Can be modified through any kernel manager by changing dynamic_boost value, a parameter part of the
+    schedtune structure.
+- New schedtune parameter - 'boost_bias'
+  - This separately enables the bias that comes with boosting tasks. This is equivalent to enabling boost
+    which allows the scheduler to just prefer big cluster cpus without increasing the utilization of the
+    tasks in the said cgroup.
+- Reconfigured scheduling parameters based on tytydraco's modifications
+- Sound driver modifications (Hardcoded)
+  - Forced CLS_AB RX HPH Mode (except for telephony)
+    - Also reconfigured CLS_AB HPH and gain path to match CLS_AB_HIFI implementation
+    - Removed low-power configuration (xvlad113x and Yaroslav Furman)
+  - 0.8 DAC gain
+  - 24bit rx format for all slim_rx output (speaker and line-out outputs)
+  - Turned on MSM HiFi control
+  - Forced low latency audio through device tree props
+  - Set custom ASM msm audio effect values and process the topology in 24bit
+  - Switched on Native SampleRate and Bit Width mode
+  - Removed headphone gain control (does not support the modifications due to the
+    changing of gain source)
+- BBRv1 + FQ TCP setup
+- CFS modifications to improve task placement
+- HRTICK enabled with fixes and adjustments
+- Rewritten Flicker free (DC Dimming) driver with improvements
+- Bumped CPU min frequencies to allow CPUs to idle more
+- Updated Wireguard to version 20201221
+- Notification LED control by Lord Boeffla
+- Fsync Switch by franciscofranco
+- USB fast charge mode by engstk
+- Uses Firmware MAC address (same as stock OOS MAC address) by prioritizing
+  FW-provided MAC address instead of wlan_mac.bin or platform driver
+- Allow CPU frequency minimum scaling
+- Selected memory management modifications from tytydraco
+- Removed CPU input boost and Devfreq boost
+- Disabled Userspace boosting
+- Disabled more debugging codes as much as possible
+- Fixed code errors / warnings pointed out by compiler
+- Includes all other features the base kernel provides (F2FS, Wireguard, etc.)
+- and more minor stuff...
