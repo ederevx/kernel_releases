@@ -13,13 +13,13 @@ This repository contains all builds of Lazy kernel for custom ROMS and OOS.
 - XXX-experimental-rX - Experimental / canary builds
 
 # Branches
-- custom2 - Lazy based on Weeb regression2 branch with Arter's qcacld-3.0 changes
-  - Supports: NOS, DerpFest, PE, ExUI, crDroid, NOS, AOSiP, MSMX (v10+), etc.
-- custom - Lazy based on Weeb regression2 branch
-  - Supports: AICP, LOS
+- custom2 - Lazy based on Weeb regression2 branch
+  - Supports: PE (May+), ExUI, crDroid, NOS, AOSiP, MSMX (v10+), RR (8.6.5), Arrow OS, etc.
+- custom - Lazy based on Weeb regression2 branch with altered wifi switch method
+  - Supports: AICP, EvoX, LOS A11, Revenge OS, DerpFest, RR, dotOS, Nezuko, etc.
 - oos - Lazy based on Weeb oos branch
   - Supports: OOS
-- pa - Lazy based on Weeb oos branch with new touchscreen gesture code
+- pa - Lazy based on Weeb oos branch with PA touchscreen and USB driver adjustments
   - Supports: PA Quartz 3+
 
 # Json links for kernel managers
