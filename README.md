@@ -1,4 +1,4 @@
-# LazyReleases
+# lazy_releases
 This repository contains all builds of Lazy kernel for custom ROMS and OOS.
 
 # Forum and Group links
