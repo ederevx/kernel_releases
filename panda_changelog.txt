@@ -1,13 +1,13 @@
 # Current Stable Version
-- panda | revision 1 | 02-28-21
+- panda | revision 2 | 04-05-21
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_op5-t
 
 # Main Features
-- Upstreamed 4.4.258 merged from CAF msm-4.4
-- Latest CAF tag and wifi stack merged
-  - LA.UM.8.4.1.r1-02900-8x98.0
+- Upstreamed 4.4.264 merged
+- Latest CAF tag and wifi stack merged for msm8998
+  - LA.UM.8.4.c25-00600-8x98.0
 - Built with latest LLVM Clang 13 from LLVM's apt repository for Debian
   - ThinLTO, LD-DCDE, and -O3 Enabled
 - Dynamic SchedTune Structure
@@ -15,11 +15,15 @@ https://github.com/ederekun/lazy_kernel_op5-t
     in source code to see the values.
   - Can be modified through any kernel manager by changing dynamic_boost value, a parameter part of the
     schedtune structure.
+  - Makes use of PM QoS to assist with task placement and improve overall system performance.
 - New schedtune parameter - 'boost_bias'
   - This separately enables the bias that comes with boosting tasks. This is equivalent to enabling boost
     which allows the scheduler to just prefer big cluster cpus without increasing the utilization of the
     tasks in the said cgroup.
-- Reconfigured scheduling parameters based on tytydraco's modifications
+- Sultan's msm8998 efficient CPU frequency table
+- Flar2's adrenoboost / GPU boost with DynStune integration
+- Modified Simple Low Memory Killer by Sultan
+- ARM's Power Allocator Thermal Governor
 - Sound driver modifications (Hardcoded)
   - Forced CLS_AB RX HPH Mode (except for telephony)
     - Also reconfigured CLS_AB HPH and gain path to match CLS_AB_HIFI implementation
@@ -32,11 +36,11 @@ https://github.com/ederekun/lazy_kernel_op5-t
   - Switched on Native SampleRate and Bit Width mode
   - Removed headphone gain control (does not support the modifications due to the
     changing of gain source)
-- BBRv1 + FQ TCP setup
+  - MSM ADM Override
+    - Pushes values to EC reference and native mode for RX outputs to improve sound quality
+- BBRv1 + FQ_CODEL TCP setup
 - CFS modifications to improve task placement
-- HRTICK enabled with fixes and adjustments
 - Rewritten Flicker free (DC Dimming) driver with improvements
-- Bumped CPU min frequencies to allow CPUs to idle more
 - Updated Wireguard to version 20201221
 - Notification LED control by Lord Boeffla
 - Fsync Switch by franciscofranco
