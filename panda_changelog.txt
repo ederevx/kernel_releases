@@ -1,5 +1,5 @@
 # Current Stable Version
-- panda | revision 2 | 04-05-21
+- panda | revision 2.1 | 04-05-21
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_op5-t
