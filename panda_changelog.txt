@@ -1,5 +1,5 @@
 # Current Stable Version
-- panda | revision 2.1 | 04-05-21
+- panda | revision 2.2 | 04-06-21
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_op5-t
@@ -33,11 +33,10 @@ https://github.com/ederekun/lazy_kernel_op5-t
   - Turned on MSM HiFi control
   - Forced low latency audio through device tree props
   - Set custom ASM msm audio effect values and process the topology in 24bit
-  - Switched on Native SampleRate and Bit Width mode
   - Removed headphone gain control (does not support the modifications due to the
     changing of gain source)
-  - MSM ADM Override
-    - Pushes values to EC reference and native mode for RX outputs to improve sound quality
+  - Force map 32 channels and set native samplerate and bit width and format for ADM EC ref
+    which is involved in post-processing audio for all audio routes
 - BBRv1 + FQ_CODEL TCP setup
 - CFS modifications to improve task placement
 - Rewritten Flicker free (DC Dimming) driver with improvements
