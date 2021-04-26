@@ -5,29 +5,33 @@ This repository contains all builds of Lazy kernel for custom ROMS and OOS.
 - XDA Thread - https://forum.xda-developers.com/t/lazy-kernel-for-op5-t-10-27-2020.4077467/
 - Telegram Support Group - https://t.me/lazykernel
 - Telegram Kernel Release Group - https://t.me/lazyrelease
-  - All builds including test builds will be uploaded here.
 
 # Version Guide
-- XXX-panda-rX - Current stable
-- XXX-test-rX - Test / beta builds
-- XXX-experimental-rX - Experimental / canary builds
+- Stable release:
+  - Lazy-custom-r2.3-20210413-1
+- Experimental release:
+  - Lazy-custom-r2.3-experimental-20210413-1
+- Test release (if any):
+  - Lazy-custom-r2.3-test-20210413-1
 
 # Branches
-- custom2 - Lazy based on Weeb regression2 branch
-  - Supports: PE (May+), ExUI, crDroid, NOS, AOSiP, MSMX (v10+), RR (8.6.5), Arrow OS, etc.
-- custom - Lazy based on Weeb regression2 branch with altered wifi switch method
-  - Supports: AICP, EvoX, LOS A11, Revenge OS, DerpFest, RR, dotOS, Nezuko, etc.
-- oos - Lazy based on Weeb oos branch
+All versions are based on weeb kernel.
+
+- custom - Newer LEDS QPNP haptic drivers
+  - Supports: Android 11 custom ROMs with the new haptic drivers (contact maintainer or developer)
+- custom-old - Old QPNP haptic drivers
+  - Supports: Android 9-11 custom ROMs without support for the new haptic drivers
+- oos - Self-explanatory
   - Supports: OOS
-- pa - Lazy based on Weeb oos branch with PA touchscreen and USB driver adjustments
+- pa - OOS + PA touchscreen and USB driver adjustments
   - Supports: PA Quartz 3+
 
 # Json links for kernel managers
 - Json for each branches are available. The following are the raw json links for each branch:
-  - custom2 - https://github.com/ederekun/LazyReleases/raw/custom2/custom2.json
-  - custom - https://github.com/ederekun/LazyReleases/raw/custom/custom.json
-  - oos - https://github.com/ederekun/LazyReleases/raw/oos/oos.json
-  - pa - https://github.com/ederekun/LazyReleases/raw/pa/pa.json
+  - custom - https://github.com/ederekun/lazy_releases/raw/jsons/custom.json
+  - custom-old - https://github.com/ederekun/lazy_releases/raw/jsons/custom-old.json
+  - oos - https://github.com/ederekun/lazy_releases/raw/jsons/oos.json
+  - pa - https://github.com/ederekun/lazy_releases/raw/jsons/pa.json
 
 ### These jsons will only be updated for stable releases.
 
