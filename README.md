@@ -26,15 +26,6 @@ All versions are based on weeb kernel.
 - pa - OOS + PA touchscreen and USB driver adjustments
   - Supports: PA Quartz 3+
 
-# Json links for kernel managers
-- Json for each branches are available. The following are the raw json links for each branch:
-  - custom - https://github.com/ederekun/lazy_releases/raw/jsons/custom.json
-  - custom-old - https://github.com/ederekun/lazy_releases/raw/jsons/custom-old.json
-  - oos - https://github.com/ederekun/lazy_releases/raw/jsons/oos.json
-  - pa - https://github.com/ederekun/lazy_releases/raw/jsons/pa.json
-
-### These jsons will only be updated for stable releases.
-
 # Licence
 Copyright (c), The Linux Foundation. All rights reserved.
 
