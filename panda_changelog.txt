@@ -1,27 +1,31 @@
 # Current Stable Version
-- panda | revision 2.2 | 04-06-21
+- panda | revision 2.3 | 04-26-21
+
+# Sub-branches Distinction
+- 2.3.1 - Sultan's CPU frequency table
+- 2.3.2 - Pixel 2's CPU frequency table
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_op5-t
 
 # Main Features
-- Upstreamed 4.4.264 merged
+- Upstreamed 4.4.267 merged
 - Latest CAF tag and wifi stack merged for msm8998
-  - LA.UM.8.4.c25-00600-8x98.0
+  - LA.UM.8.4.c25-01100-8x98.0 / LA.UM.9.2.r1-03000-SDMxx0.0
 - Built with latest LLVM Clang 13 from LLVM's apt repository for Debian
   - ThinLTO, LD-DCDE, and -O3 Enabled
-- Dynamic SchedTune Structure
+- Adaptive Tune Structure
   - Dynamically sets values according to interactivity with durations preconfigured, check lazy_defconfig
     in source code to see the values.
-  - Can be modified through any kernel manager by changing dynamic_boost value, a parameter part of the
+  - Can be modified through any kernel manager by changing adaptive_boost value, a parameter part of the
     schedtune structure.
-  - Makes use of PM QoS to assist with task placement and improve overall system performance.
+  - Makes use of PM QoS to further suplement and improve overall system performance.
 - New schedtune parameter - 'boost_bias'
   - This separately enables the bias that comes with boosting tasks. This is equivalent to enabling boost
     which allows the scheduler to just prefer big cluster cpus without increasing the utilization of the
     tasks in the said cgroup.
-- Sultan's msm8998 efficient CPU frequency table
-- Flar2's adrenoboost / GPU boost with DynStune integration
+- Unified wifi drivers for better custom ROM support
+- Flar2's adrenoboost / GPU boost with Adaptune integration
 - Modified Simple Low Memory Killer by Sultan
 - ARM's Power Allocator Thermal Governor
 - Sound driver modifications (Hardcoded)
@@ -32,7 +36,7 @@ https://github.com/ederekun/lazy_kernel_op5-t
   - 24bit rx format for all slim_rx output (speaker and line-out outputs)
   - Turned on MSM HiFi control
   - Forced low latency audio through device tree props
-  - Set custom ASM msm audio effect values and process the topology in 24bit
+  - Set custom ASM msm audio effect values
   - Removed headphone gain control (does not support the modifications due to the
     changing of gain source)
   - Force map 32 channels and set native samplerate and bit width and format for ADM EC ref
@@ -43,7 +47,7 @@ https://github.com/ederekun/lazy_kernel_op5-t
 - Updated Wireguard to version 20201221
 - Notification LED control by Lord Boeffla
 - Fsync Switch by franciscofranco
-- USB fast charge mode by engstk
+- USB fast charge mode by engstk and refactored by ederekun
 - Uses Firmware MAC address (same as stock OOS MAC address) by prioritizing
   FW-provided MAC address instead of wlan_mac.bin or platform driver
 - Allow CPU frequency minimum scaling
