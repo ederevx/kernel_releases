@@ -1,18 +1,14 @@
 # Current Stable Version
-- panda | revision 2.3 | 04-26-21
-
-# Sub-branches Distinction
-- 2.3.1 - Sultan's CPU frequency table
-- 2.3.2 - Pixel 2's CPU frequency table
+- panda | revision 2.4 | 08-14-21
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_op5-t
 
 # Main Features
-- Upstreamed 4.4.267 merged
+- Upstreamed 4.4.280 merged
 - Latest CAF tag and wifi stack merged for msm8998
-  - LA.UM.8.4.c25-01100-8x98.0 / LA.UM.9.2.r1-03000-SDMxx0.0
-- Built with latest LLVM Clang 13 from LLVM's apt repository for Debian
+  - LA.UM.8.4.c25-02500-8x98.0 / LA.UM.8.2.r2-04800-sdm660.0
+- Built with latest LLVM Clang 12 from LLVM's apt repository for Debian
   - ThinLTO, LD-DCDE, and -O3 Enabled
 - Adaptive Tune Structure
   - Dynamically sets values according to interactivity with durations preconfigured, check lazy_defconfig
@@ -20,37 +16,38 @@ https://github.com/ederekun/lazy_kernel_op5-t
   - Can be modified through any kernel manager by changing adaptive_boost value, a parameter part of the
     schedtune structure.
   - Makes use of PM QoS to further suplement and improve overall system performance.
+- Sultan's CPU higher efficiency frequency table
+- Selected changes to scheduler and ARM64 assembly and locking headers backported from higher kernel versions
 - New schedtune parameter - 'boost_bias'
   - This separately enables the bias that comes with boosting tasks. This is equivalent to enabling boost
     which allows the scheduler to just prefer big cluster cpus without increasing the utilization of the
     tasks in the said cgroup.
 - Unified wifi drivers for better custom ROM support
-- Flar2's adrenoboost / GPU boost with Adaptune integration
 - Modified Simple Low Memory Killer by Sultan
 - ARM's Power Allocator Thermal Governor
+- DTS 24bit HPX Eagle ADM and ASM forwardport with modifications to force functionality
 - Sound driver modifications (Hardcoded)
   - Forced CLS_AB RX HPH Mode (except for telephony)
     - Also reconfigured CLS_AB HPH and gain path to match CLS_AB_HIFI implementation
     - Removed low-power configuration (xvlad113x and Yaroslav Furman)
   - 0.8 DAC gain
-  - 24bit rx format for all slim_rx output (speaker and line-out outputs)
+  - Removed RX HPFs
   - Turned on MSM HiFi control
-  - Forced low latency audio through device tree props
-  - Set custom ASM msm audio effect values
+  - Set custom ASM MSM audio effect values
   - Removed headphone gain control (does not support the modifications due to the
     changing of gain source)
   - Force map 32 channels and set native samplerate and bit width and format for ADM EC ref
     which is involved in post-processing audio for all audio routes
-- BBRv1 + FQ_CODEL TCP setup
+- BBRv1 + FQ_CODEL TCP setup (repicked from xzr)
+- TCP adjustments for better internet stability
 - CFS modifications to improve task placement
 - Rewritten Flicker free (DC Dimming) driver with improvements
-- Updated Wireguard to version 20201221
+- Updated Wireguard to version 1.0.20210606
 - Notification LED control by Lord Boeffla
 - Fsync Switch by franciscofranco
 - USB fast charge mode by engstk and refactored by ederekun
-- Uses Firmware MAC address (same as stock OOS MAC address) by prioritizing
-  FW-provided MAC address instead of wlan_mac.bin or platform driver
-- Allow CPU frequency minimum scaling
+- Uses Firmware MAC address (same as stock OOS MAC address) by prioritizing FW-provided MAC address
+  instead of wlan_mac.bin or platform driver
 - Selected memory management modifications from tytydraco
 - Removed CPU input boost and Devfreq boost
 - Disabled Userspace boosting
