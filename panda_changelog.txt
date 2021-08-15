@@ -1,5 +1,5 @@
 # Current Stable Version
-- panda | revision 2.4 | 08-14-21
+- panda | revision 2.4 | 08-15-21
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_op5-t
@@ -9,7 +9,6 @@ https://github.com/ederekun/lazy_kernel_op5-t
 - Latest CAF tag and wifi stack merged for msm8998
   - LA.UM.8.4.c25-02500-8x98.0 / LA.UM.8.2.r2-04800-sdm660.0
 - Built with latest LLVM Clang 12 from LLVM's apt repository for Debian
-  - ThinLTO, LD-DCDE, and -O3 Enabled
 - Adaptive Tune Structure
   - Dynamically sets values according to interactivity with durations preconfigured, check lazy_defconfig
     in source code to see the values.

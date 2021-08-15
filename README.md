@@ -8,11 +8,9 @@ This repository contains all builds of Lazy kernel for custom ROMS and OOS.
 
 # Version Guide
 - Stable release:
-  - Lazy-custom-r2.3-20210413-1
-- Experimental release:
-  - Lazy-custom-r2.3-experimental-20210413-1
-- Test release (if any):
-  - Lazy-custom-r2.3-test-20210413-1
+  - lazy-custom-v2.4-20210815-1
+- Test release (only posted in telegram):
+  - lazy-custom-v2.4-20210815-1-test
 
 # Branches
 All versions are based on weeb kernel.
