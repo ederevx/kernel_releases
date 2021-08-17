@@ -2,7 +2,7 @@
 - panda | revision 2.4 | 08-15-21
 
 # Source Code
-https://github.com/ederekun/lazy_kernel_op5-t
+https://github.com/ederekun/lazy_kernel_oneplus_msm8998
 
 # Main Features
 - Upstreamed 4.4.280 merged
