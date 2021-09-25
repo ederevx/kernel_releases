@@ -1,21 +1,25 @@
 # Current Stable Version
-- panda | revision 2.4 | 08-15-21
+- panda | revision 2.4 | 09-25-21
 
 # Source Code
 https://github.com/ederekun/lazy_kernel_oneplus_msm8998
 
 # Main Features
-- Upstreamed 4.4.280 merged
+- Upstreamed 4.4.283 merged
 - Latest CAF tag and wifi stack merged for msm8998
   - LA.UM.8.4.c25-02500-8x98.0 / LA.UM.8.2.r2-04800-sdm660.0
 - Built with latest LLVM Clang 12 from LLVM's apt repository for Debian
 - Adaptive Tune Structure
+  - A very lightweight solution that only makes use of an input handler, frame buffer notifier, and timers.
+    The rest are done through structures and intersource code variables.
   - Dynamically sets values according to interactivity with durations preconfigured, check lazy_defconfig
     in source code to see the values.
   - Can be modified through any kernel manager by changing adaptive_boost value, a parameter part of the
     schedtune structure.
-  - Makes use of PM QoS to further suplement and improve overall system performance.
-- Sultan's CPU higher efficiency frequency table
+- Adaptive Schedutil limits
+  - Adjust rate limits for changing and assessing next_freq according to interactivity. Increase the limit up to
+    100ms delay per policy update according to adaptive tune's state.
+- Optimized task tracking in SchedTune to reduce its effect to overall latency.
 - Selected changes to scheduler and ARM64 assembly and locking headers backported from higher kernel versions
 - New schedtune parameter - 'boost_bias'
   - This separately enables the bias that comes with boosting tasks. This is equivalent to enabling boost
@@ -37,6 +41,7 @@ https://github.com/ederekun/lazy_kernel_oneplus_msm8998
     changing of gain source)
   - Force map 32 channels and set native samplerate and bit width and format for ADM EC ref
     which is involved in post-processing audio for all audio routes
+  - Experimental QCOM HWACC Audio Effects forced custom configuration
 - BBRv1 + FQ_CODEL TCP setup (repicked from xzr)
 - TCP adjustments for better internet stability
 - CFS modifications to improve task placement
