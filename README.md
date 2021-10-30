@@ -2,7 +2,7 @@
 This repository contains kernel builds for Oneplus 5/T ROMs.
 
 # Forum and Group links
-- XDA Thread - https://forum.xda-developers.com/t/lazy-kernel-for-op5-t-10-27-2020.4077467/
+- XDA Thread - https://forum.xda-developers.com/t/x-kernel-for-oneplus-5-t-10-31-2021.4077467/
 - Telegram Support Group - https://t.me/x_kernel
 - Telegram Kernel Release Group - https://t.me/x_release
 
