@@ -1,28 +1,24 @@
-# lazy_releases
-This repository contains all builds of Lazy kernel for custom ROMS and OOS.
+# kernel_releases
+This repository contains kernel builds for Oneplus 5/T ROMs.
 
 # Forum and Group links
 - XDA Thread - https://forum.xda-developers.com/t/lazy-kernel-for-op5-t-10-27-2020.4077467/
-- Telegram Support Group - https://t.me/lazykernel
-- Telegram Kernel Release Group - https://t.me/lazyrelease
+- Telegram Support Group - https://t.me/x_kernel
+- Telegram Kernel Release Group - https://t.me/x_release
 
 # Version Guide
 - Stable release:
-  - lazy-custom-v2.4-20210925-1
+  - x-base-v1-20211031-1
 - Test release (only posted in telegram):
-  - lazy-custom-v2.4-20210925-1-test
+  - x-base-v1-20211031-1-test
 
 # Branches
-All versions are based on weeb kernel.
+All versions are based on LOS kernel.
 
-- custom - Newer LEDS QPNP haptic drivers
-  - Supports: Android 11 custom ROMs with the new haptic drivers (contact maintainer or developer)
-- custom-old - Old QPNP haptic drivers
-  - Supports: Android 9-11 custom ROMs without support for the new haptic drivers
-- oos - Self-explanatory
-  - Supports: OOS
-- pa - OOS + PA touchscreen and USB driver adjustments
-  - Supports: PA Quartz 3+
+- base - Newer LEDS QPNP haptic drivers
+  - Supports: Android 11-12 ROMs with the new haptic drivers (contact maintainer or developer)
+- old - Old QPNP haptic drivers
+  - Supports: Android 9-11 ROMs without support for the new haptic drivers (includes OOS)
 
 # Licence
 Copyright (c), The Linux Foundation. All rights reserved.
