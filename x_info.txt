@@ -1,5 +1,5 @@
 # Current Stable Version
-- version 1 | build 1 | 10-31-21
+- version 1 | build 2 | 10-31-21
 
 # Source Code
 https://github.com/ederekun/x_kernel_oneplus_msm8998
