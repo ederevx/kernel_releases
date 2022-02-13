@@ -1,16 +1,15 @@
 # Current Stable Version
-- version 1 | build 2 | 10-31-21
+- version 2 | build 1 | 02-12-22
 
 # Source Code
 https://github.com/ederekun/x_kernel_oneplus_msm8998
 
 # Main Features
-- Upstreamed 4.4.289 merged
+- Upstreamed 4.4.302 merged
 - Latest CAF tag and wifi stack merged for msm8998
 - Built with latest LLVM Clang 13 from Google toolchain prebuilts
-- Android 12 support (BPF patches picked from Maitreya)
-- Schedtune priority-assisted boosting and input timeout
-- Striped down schedutil with rate-limit inversion
+- Android 12 support (BPF patches by LOS kernel)
+- Schedtune input-assisted boosting timeout (Utilizes a custom timeout API)
 - Selected changes to scheduler and ARM64 assembly and locking headers backported from higher kernel versions
 - 32ms PELT scheduler picked from weeb and xzr's kernel
 - 100Hz interrupt timer
@@ -18,12 +17,8 @@ https://github.com/ederekun/x_kernel_oneplus_msm8998
 - KGSL driver backports from 4.14
 - Unified wifi initialization for better custom ROM support
 - Adapted tri-state key driver and touchscreen driver to support both OOS and custom ROMs within a single image
-- Modified Simple Low Memory Killer by Sultan
-- General kernel improvements picked from Sultan's floral kernel repository
+- Simple Low Memory Killer by Sultan
 - Sound driver modifications (Hardcoded)
-  - Forced CLS_AB RX HPH Mode (overrides HiFi amplifier modes)
-  - Removed RX HPFs
-  - Turned on MSM HiFi control
   - Force map 32 channels and set native samplerate and bit width and format for ADM EC ref
     which is involved in post-processing audio for all audio routes
   - Experimental QCOM HWACC Audio Effects forced custom configuration in 24bit
