@@ -3,8 +3,8 @@ This repository contains kernel builds for Oneplus 5/T ROMs.
 
 # Forum and Group links
 - XDA Thread - https://forum.xda-developers.com/t/x-kernel-for-oneplus-5-t-10-31-2021.4077467/
-- Telegram Support Group - https://t.me/x_kernel
-- Telegram Kernel Release Group - https://t.me/x_release
+- Telegram Support Group - https://t.me/x_kernel_builds_discussion
+- Telegram Kernel Builds - https://t.me/x_kernel_builds
 
 # Version Guide
 - Stable release:
@@ -17,8 +17,10 @@ All versions are based on LOS kernel.
 
 - base - Newer LEDS QPNP haptic drivers
   - Supports: Android 11-12 ROMs with the new haptic drivers (contact maintainer or developer)
+  - Likely you want to flash this on new/updated custom ROMs
 - old - Old QPNP haptic drivers
   - Supports: Android 9-11 ROMs without support for the new haptic drivers (includes OOS)
+  - Typically used for old ROMs, flash this if you are in OOS
 
 # Licence
 Copyright (c), The Linux Foundation. All rights reserved.
