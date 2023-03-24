@@ -1,15 +1,17 @@
 # Current Stable Version
-- version 2 | build 1 | 02-12-22
+- version 3 | build 1 | 03-23-23
 
 # Source Code
 https://github.com/ederekun/x_kernel_oneplus_msm8998
 
 # Main Features
-- Upstreamed 4.4.302 merged
-- Latest CAF tag and wifi stack merged for msm8998
-- Built with latest LLVM Clang 13 from Google toolchain prebuilts
-- Android 12 support (BPF patches by LOS kernel)
-- Schedtune input-assisted boosting timeout (Utilizes a custom timeout API)
+- Based on latest LOS kernel 3-23-2023
+- Built with LLVM Clang 15.0.1 from Google toolchain prebuilts
+- Android 13 support
+- Scheduler Interactive Extension
+	- Adjusts scheduler features and schedtune boost based on user touch input and screen framebuffer commits
+	- Utilizes lwtimeout, a custom timeout API authored by yours truly
+- Schedtune boost adj-based task filter (inspired by Yaroslav Furman)
 - Selected changes to scheduler and ARM64 assembly and locking headers backported from higher kernel versions
 - 32ms PELT scheduler picked from weeb and xzr's kernel
 - 100Hz interrupt timer
@@ -19,20 +21,20 @@ https://github.com/ederekun/x_kernel_oneplus_msm8998
 - Adapted tri-state key driver and touchscreen driver to support both OOS and custom ROMs within a single image
 - Simple Low Memory Killer by Sultan
 - Sound driver modifications (Hardcoded)
-  - Force map 32 channels and set native samplerate and bit width and format for ADM EC ref
-    which is involved in post-processing audio for all audio routes
-  - Experimental QCOM HWACC Audio Effects forced custom configuration in 24bit
-- BBRv1 + FQ_CODEL TCP setup (repicked from xzr)
+  - Force native samplerate and bit width and format for ADM EC ref which is involved in post-processing audio 
+  	for all audio routes
+  - Completely disable compander safely
+  - Always enable MSM HiFi control and set hph_mode to CLS_H_HIFI
 - TCP adjustments for better internet stability
 - CFS backports from 4.14
 - Rewritten Flicker free (DC Dimming) driver with DT-defined elvss off threshold
 - Notification LED control by Lord Boeffla
-- Sound control by flar2
 - Backlight min and dimmer by flar2
 - USB fast charge mode by engstk and refactored by ederekun
 - Uses Firmware MAC address (same as stock OOS MAC address) by prioritizing FW-provided MAC address
   instead of wlan_mac.bin or platform driver
 - Selected memory management modifications from tytydraco
+- Cleaned off OnePlus PM QoS additions
 - Disabled userspace boosting
 - Disabled debugging drivers
 - Fixed code errors / warnings pointed out by compiler
